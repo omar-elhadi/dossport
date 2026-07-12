@@ -57,7 +57,8 @@ export function TaskDetailPage() {
     );
   };
 
-  const updateStatus = (status: string) => {
+  const updateStatus = (status: string | null) => {
+    if (!status) return;
     setTasks((prev) =>
       prev.map((tk) => {
         if (tk.id !== task.id) return tk;

@@ -72,7 +72,7 @@ export function TasksPage() {
         <div className="flex flex-wrap items-center gap-2">
           <Select
             value={taskFilter.status}
-            onValueChange={(val) => setTaskFilter({ status: val })}
+            onValueChange={(val) => val && setTaskFilter({ status: val })}
           >
             <SelectTrigger className="w-auto">
               <SelectValue />
@@ -88,7 +88,7 @@ export function TasksPage() {
 
           <Select
             value={taskFilter.category}
-            onValueChange={(val) => setTaskFilter({ category: val })}
+            onValueChange={(val) => val && setTaskFilter({ category: val })}
           >
             <SelectTrigger className="w-auto">
               <SelectValue />
@@ -105,7 +105,7 @@ export function TasksPage() {
 
           <Select
             value={taskFilter.sort}
-            onValueChange={(val) => setTaskFilter({ sort: val })}
+            onValueChange={(val) => val && setTaskFilter({ sort: val })}
           >
             <SelectTrigger className="w-auto">
               <SelectValue />

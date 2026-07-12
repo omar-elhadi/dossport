@@ -120,7 +120,7 @@ export function CreateTaskModal({ onClose }: CreateTaskModalProps) {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium mb-1.5">{t("category", lang)}</label>
-              <Select value={category} onValueChange={(val) => setCategory(val as Category)}>
+              <Select value={category} onValueChange={(val) => val && setCategory(val as Category)}>
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
